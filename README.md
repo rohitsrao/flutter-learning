@@ -1,5 +1,5 @@
 # flutter-learning
-Collection of Apps built using flutter as part of a Udemy course by Maximilian Schwarzmüller
+Collection of Apps built using Flutter as part of a Udemy [course](https://www.udemy.com/course/learn-flutter-dart-to-build-ios-android-apps/) by Maximilian Schwarzmüller
 
 Only the lib folder is being uploaded. 
 
