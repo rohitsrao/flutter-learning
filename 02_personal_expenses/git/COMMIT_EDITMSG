@@ -1,0 +1,12 @@
+Introduced an adaptive widget for FlatButton
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+# Changes to be committed:
+#	new file:   lib/widgets/adaptive_flat_button.dart
+#	modified:   lib/widgets/new_transaction.dart
+#
+# ------------------------ >8 ------------------------
+# Do not modify or remove the line above.
+# Everything below it will be ignored.

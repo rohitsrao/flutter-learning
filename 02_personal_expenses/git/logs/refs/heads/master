@@ -1,0 +1,87 @@
+0000000000000000000000000000000000000000 eb2cbcf6e349fe3714312d4b791e83da49c19467 Rohit <rohitsrao@gmail.com> 1626599293 +0200	commit (initial): Initial Commit
+eb2cbcf6e349fe3714312d4b791e83da49c19467 37e5ea35846e611cdec7abc725ba874d23ce1db5 Rohit <rohitsrao@gmail.com> 1626600032 +0200	commit: Downloaded and replaced the provided main.dart and pubspec.yaml files
+37e5ea35846e611cdec7abc725ba874d23ce1db5 b101cd7406fcd8e39e4c922b7624d935715d6821 Rohit <rohitsrao@gmail.com> 1626600327 +0200	commit: Added Card placeholders for Chart and list of transactions
+b101cd7406fcd8e39e4c922b7624d935715d6821 c15844d6e8655c8544da69e6e5d506ca7b3a4f82 Rohit <rohitsrao@gmail.com> 1626600437 +0200	commit: Added elevation of 5 to the Chart placeholder card
+c15844d6e8655c8544da69e6e5d506ca7b3a4f82 563f0a35b23213574e5103998249db3add0d9c4b Rohit <rohitsrao@gmail.com> 1626600594 +0200	commit: Wrapped the text of Chart Card Placeholder with a container.
+563f0a35b23213574e5103998249db3add0d9c4b b1a8fcdcaca5cb032f1f26a3c2ad1ee5ff212d9c Rohit <rohitsrao@gmail.com> 1626600664 +0200	commit: Added full device width to chart placeholder along with blue background
+b1a8fcdcaca5cb032f1f26a3c2ad1ee5ff212d9c 880cccd26096a624ab9d7b78150eb096ddfa1ea2 Rohit <rohitsrao@gmail.com> 1626600956 +0200	commit: Wrapped card with a container instead of the text being wrapped with a
+880cccd26096a624ab9d7b78150eb096ddfa1ea2 8517abf27633e42cf7d3ea754ea02dfc6d7cff67 Rohit <rohitsrao@gmail.com> 1626602944 +0200	commit: Added mainAxisAlignment and crossAxisAlignment to Column in body.
+8517abf27633e42cf7d3ea754ea02dfc6d7cff67 a7f8d4bcedfe7f82d3b524256a817bded82e0ae5 Rohit <rohitsrao@gmail.com> 1626603791 +0200	commit: Created Transaction class in transaction.dart
+a7f8d4bcedfe7f82d3b524256a817bded82e0ae5 fc9d09001c260da1f2a7c860a28ddce757c1596f Rohit <rohitsrao@gmail.com> 1626604024 +0200	commit: Defined two dummy transactions in list of transactions in main.dart
+fc9d09001c260da1f2a7c860a28ddce757c1596f 14e1ca065d441b437a2d5a949dc6d7ccb275700f Rohit <rohitsrao@gmail.com> 1626604567 +0200	commit: Removed the list of tx card placeholder.
+14e1ca065d441b437a2d5a949dc6d7ccb275700f c3ff3d3ca10e652fb06b7b04b796941f192ea761 Rohit <rohitsrao@gmail.com> 1626605313 +0200	commit: Explained how each card in list of transactions would appear
+c3ff3d3ca10e652fb06b7b04b796941f192ea761 7b35d4093519791c3a117d4b890d3133582e2616 Rohit <rohitsrao@gmail.com> 1626605622 +0200	commit: Add vertical and horizontal margin to price container
+7b35d4093519791c3a117d4b890d3133582e2616 0d8fe0eba8ac5b3d1873b4df7177df8f57abdb11 Rohit <rohitsrao@gmail.com> 1626605812 +0200	commit: Added border to the price container via the decoratoin argument of
+0d8fe0eba8ac5b3d1873b4df7177df8f57abdb11 d2dacdcf1f98e6b5bf52718a4efa19e47fedc1ae Rohit <rohitsrao@gmail.com> 1626605929 +0200	commit: Added a padding around the child container to give it space
+d2dacdcf1f98e6b5bf52718a4efa19e47fedc1ae 7e37a27aca7511ce527024c066ab301ac494fce7 Rohit <rohitsrao@gmail.com> 1626606192 +0200	commit: Changed price container border color to purple
+7e37a27aca7511ce527024c066ab301ac494fce7 0537260de2d1e67bd996408965c383121af7eadd Rohit <rohitsrao@gmail.com> 1626606404 +0200	commit: Changed transaction title to bold and fontsize to 16
+0537260de2d1e67bd996408965c383121af7eadd b73cdf38c1c2bc3df460e674c5e31fd9f252042f Rohit <rohitsrao@gmail.com> 1626606814 +0200	commit: Added dollar sign using String Interpolation
+b73cdf38c1c2bc3df460e674c5e31fd9f252042f 00b67215a57bbe503bcef46fcb84d2b35da39e7f Rohit <rohitsrao@gmail.com> 1626608000 +0200	commit: Formatted date using intl package.
+00b67215a57bbe503bcef46fcb84d2b35da39e7f 70207ef7990027f8961373970691f65558ad10e6 Rohit <rohitsrao@gmail.com> 1626608505 +0200	commit: Created a card with a column containing 2 textfields between the chart
+70207ef7990027f8961373970691f65558ad10e6 f502a15abae4cdcf8304b24d70a0cac2fd018928 Rohit <rohitsrao@gmail.com> 1626608870 +0200	commit: Added elevation to Input Area card
+f502a15abae4cdcf8304b24d70a0cac2fd018928 c01ea4d2175fe0124b1d21aa373a9b8b71492cd8 Rohit <rohitsrao@gmail.com> 1626609063 +0200	commit: Wrapped the Input Area card with a container so that padding can be set
+c01ea4d2175fe0124b1d21aa373a9b8b71492cd8 6d644eaaf038f096af4202be5667e30e2ab93216 Rohit <rohitsrao@gmail.com> 1626609295 +0200	commit: Added Title and Amount input label text
+6d644eaaf038f096af4202be5667e30e2ab93216 caa40042e0c14eb7ea32a4e1e555f9aacecc1e65 Rohit <rohitsrao@gmail.com> 1626609731 +0200	commit: corrected typo
+caa40042e0c14eb7ea32a4e1e555f9aacecc1e65 5d2c1890ae8a755222b14d944133c3eca831cc2b Rohit <rohitsrao@gmail.com> 1626610426 +0200	commit: Defined a title and amount controller using TextEditingController
+5d2c1890ae8a755222b14d944133c3eca831cc2b e8dbc0c11bf3f573cd0fb0980e54e448ac6b2aa0 Rohit <rohitsrao@gmail.com> 1626612009 +0200	commit: Created models and widgets folder to distinguish between standard
+e8dbc0c11bf3f573cd0fb0980e54e448ac6b2aa0 1eaf4e6338b9b99cd0aa7da80e4bf2a76190bfaf Rohit <rohitsrao@gmail.com> 1626612457 +0200	commit: Defined the boilerplate code for a StatefulWidget in
+1eaf4e6338b9b99cd0aa7da80e4bf2a76190bfaf 3c81763434f92de2b49d0c50d79fe0f38ca71e27 Rohit <rohitsrao@gmail.com> 1626612565 +0200	commit: deleted a typo (stuff was printed by mistake)
+3c81763434f92de2b49d0c50d79fe0f38ca71e27 e42532456c44cb6645d4f5a9585d4fd53ce1f73b Rohit <rohitsrao@gmail.com> 1626613173 +0200	commit: Updated import statements - intl and transaction_list.dart
+e42532456c44cb6645d4f5a9585d4fd53ce1f73b a8cae94e3b57dac261ed3397406a245fd292d485 Rohit <rohitsrao@gmail.com> 1626613408 +0200	commit: Created 2 new widget files
+a8cae94e3b57dac261ed3397406a245fd292d485 2765c0d14d60ebabbe4ae3eb98895cc62428a066 Rohit <rohitsrao@gmail.com> 1626613818 +0200	commit: Shifted the input area card to new_transaction.dart
+2765c0d14d60ebabbe4ae3eb98895cc62428a066 6840eb22f495e1d996b723bd8c88d632a761e211 Rohit <rohitsrao@gmail.com> 1626614349 +0200	commit: Transferred the import statements for new_transaction.dart and
+6840eb22f495e1d996b723bd8c88d632a761e211 36e146f5dda92031a9ac8616cb636f51e1413395 Rohit <rohitsrao@gmail.com> 1626614520 +0200	commit: Correct typo
+36e146f5dda92031a9ac8616cb636f51e1413395 5d20fc36ff17188e7b335290127d5e71968f95da Rohit <rohitsrao@gmail.com> 1626614599 +0200	commit: Converted TransactionList to a Stateless Widget as the state of the list
+5d20fc36ff17188e7b335290127d5e71968f95da 9fdbb0c1ab4b41cc0e527a426d8ab0252ea2d7c3 Rohit <rohitsrao@gmail.com> 1626614704 +0200	commit: Tranferred _userTransactions list from TransactionList to
+9fdbb0c1ab4b41cc0e527a426d8ab0252ea2d7c3 de5123b7e4346c6de506875e699fd334806ffc6f Rohit <rohitsrao@gmail.com> 1626614873 +0200	commit: Added import to models/transaction.dart
+de5123b7e4346c6de506875e699fd334806ffc6f 626122f52d2737c300079da488b4182204dd1376 Rohit <rohitsrao@gmail.com> 1626615156 +0200	commit: Defined list of transactions named transcations as a property in
+626122f52d2737c300079da488b4182204dd1376 c17e95879a32a76a4b3ea6c34fd8aa8a381d0acc Rohit <rohitsrao@gmail.com> 1626615669 +0200	commit: Defined a function to add new transaction to the list. It includes a
+c17e95879a32a76a4b3ea6c34fd8aa8a381d0acc e0aac6c4b1f4111aaebea3fb7b639bec125bc44a Rohit <rohitsrao@gmail.com> 1626623137 +0200	commit: Added the code from course resoruces for build method in
+e0aac6c4b1f4111aaebea3fb7b639bec125bc44a fb304a66bbf505815888ecf46f668521789ce6fd Rohit <rohitsrao@gmail.com> 1626633659 +0200	commit: Introduced SingleChildScrollView
+fb304a66bbf505815888ecf46f668521789ce6fd aefd225bfb8e8fe1995799e8f1b699d3de69ce2e Rohit <rohitsrao@gmail.com> 1626779888 +0200	commit: Defined a container of height 300px for the Column in
+aefd225bfb8e8fe1995799e8f1b699d3de69ce2e 5543606dfb0d25aec021c6317ca59d43c4493f86 Rohit <rohitsrao@gmail.com> 1626781332 +0200	commit: Converted the ListView into ListView.builder() in transaction_list.dart
+5543606dfb0d25aec021c6317ca59d43c4493f86 df44765f96b7199600cb93a48dd6275e8722429d Rohit <rohitsrao@gmail.com> 1626782777 +0200	commit: Changed KeyboardType, onSubmitted Action and 2 decimal places
+df44765f96b7199600cb93a48dd6275e8722429d fd2f1e4a90090cf24bf73e5ec195c03153b4ee17 Rohit <rohitsrao@gmail.com> 1626783285 +0200	commit: Added + icon to AppBar using IconButton in the actions argument
+fd2f1e4a90090cf24bf73e5ec195c03153b4ee17 bd3d456feb86fc5a15fc1e274695697d8a9b3656 Rohit <rohitsrao@gmail.com> 1626783454 +0200	commit: Added a floating action button with a plus icon in the bottom right of
+bd3d456feb86fc5a15fc1e274695697d8a9b3656 7ca896802e991db97a8f3a9198d550b1f8daf01d Rohit <rohitsrao@gmail.com> 1626783612 +0200	commit: Floating action button shifted to center bottom using
+7ca896802e991db97a8f3a9198d550b1f8daf01d 682e7cc703d97c2e944d7d25a7ab4e6b08b2a9c3 Rohit <rohitsrao@gmail.com> 1626784164 +0200	commit: created a function startAddNewTransaction. This accepts a BuildContext
+682e7cc703d97c2e944d7d25a7ab4e6b08b2a9c3 be9003ff4f2056ecfd42726f227dda0d85a8f38c Rohit <rohitsrao@gmail.com> 1626787911 +0200	commit: Converted MyHomeApp to a StatefulWidget
+be9003ff4f2056ecfd42726f227dda0d85a8f38c b19d16cc9d60336bc6fc0d180c347990106def77 Rohit <rohitsrao@gmail.com> 1626788777 +0200	commit: Converted NewTransaction into a StatefulWidget
+b19d16cc9d60336bc6fc0d180c347990106def77 113a9b3b242e8eb73aae912bfdfc4bce776a931d Rohit <rohitsrao@gmail.com> 1626789075 +0200	commit: Added Navigator.of(context).pop() to close the modal sheet after submit
+113a9b3b242e8eb73aae912bfdfc4bce776a931d 8e99384adba7b1d3e7b2d98c118a657a47948ef8 Rohit <rohitsrao@gmail.com> 1626789665 +0200	commit: Already account for these changes.
+8e99384adba7b1d3e7b2d98c118a657a47948ef8 fae46566c3aa9777b2339941ae21525a13e6dbf6 Rohit <rohitsrao@gmail.com> 1626790527 +0200	commit: Added Theme
+fae46566c3aa9777b2339941ae21525a13e6dbf6 8f9f5c3f2e572913b75a7bf2ca6fe442cab36c3e Rohit <rohitsrao@gmail.com> 1626791161 +0200	commit: CustomFonts
+8f9f5c3f2e572913b75a7bf2ca6fe442cab36c3e 94c55606221c8e77b7ca8a65147c8e46d28c8681 Rohit <rohitsrao@gmail.com> 1626791324 +0200	commit: Applied OpenSans only to the title of the app in the appBar
+94c55606221c8e77b7ca8a65147c8e46d28c8681 a674b9d52e627dce8557448d1d219e4c460b4100 Rohit <rohitsrao@gmail.com> 1626791607 +0200	commit: Defined an appBarTheme in MaterialApp definition
+a674b9d52e627dce8557448d1d219e4c460b4100 381bce3e721769544978959b74bc29de294fbaed Rohit <rohitsrao@gmail.com> 1626792422 +0200	commit: Appled CustomFont to Transaction Titles
+381bce3e721769544978959b74bc29de294fbaed d74eacc5723cdc379ed1f63571b003be3a316b21 Rohit <rohitsrao@gmail.com> 1626794527 +0200	commit: Added image to app which is displayed before transactions are added
+d74eacc5723cdc379ed1f63571b003be3a316b21 8bfdf68450c1e0c049960a30443814c2d0a2224c Rohit <rohitsrao@gmail.com> 1626809916 +0200	commit: groupedTransactions prints properly
+8bfdf68450c1e0c049960a30443814c2d0a2224c 1380fc393786beb44fe1839c3255bf3326fbc17f Rohit <rohitsrao@gmail.com> 1626851385 +0200	commit: Displays day of the week as single character and amount instead of chart
+1380fc393786beb44fe1839c3255bf3326fbc17f e57e5ad5b430026a69dfb1c939bfe761a6f842a3 Rohit <rohitsrao@gmail.com> 1626853428 +0200	commit: Chart Widget is displayed without horizontal spacing
+e57e5ad5b430026a69dfb1c939bfe761a6f842a3 97afc4a605bc5b68d5857ae02888d09265daab75 Rohit <rohitsrao@gmail.com> 1626862718 +0200	commit: Added mainAxisAlignment to spreadout the bars
+97afc4a605bc5b68d5857ae02888d09265daab75 1d451b89309f0e38766a445280c10b7a7a0a20c6 Rohit <rohitsrao@gmail.com> 1626865931 +0200	commit: Added Padding to the Chart Card itself and added FittedBox to the label
+1d451b89309f0e38766a445280c10b7a7a0a20c6 4452f985f8cf162457e76fe7780c306c9b961e5c Rohit <rohitsrao@gmail.com> 1626867165 +0200	commit: Converted transaction_list to contain a ListTile with CircularAvatar etc
+4452f985f8cf162457e76fe7780c306c9b961e5c 356f9cd045b79252ebb7145fb0544585ea13b266 Rohit <rohitsrao@gmail.com> 1626867471 +0200	commit: Reversed the weekdays in the chart. Current Day is now on the right.
+356f9cd045b79252ebb7145fb0544585ea13b266 691547e346555037b1fb436f978983df86b655c0 Rohit <rohitsrao@gmail.com> 1626868662 +0200	commit: Added non-functional DatePicker
+691547e346555037b1fb436f978983df86b655c0 e443a43045349413cc22e06f48e69aeaaca5ed3e Rohit <rohitsrao@gmail.com> 1626868830 +0200	commit: Converted submitData to a private function
+e443a43045349413cc22e06f48e69aeaaca5ed3e 1e5689981096f5ed10da33e8bd4aa75826081b74 Rohit <rohitsrao@gmail.com> 1626870510 +0200	commit: DatePicker now works and able to add transaction to list of transactions
+1e5689981096f5ed10da33e8bd4aa75826081b74 2c7da2c785bc14bbf3b782c85d143242f253bd85 Rohit <rohitsrao@gmail.com> 1626871338 +0200	commit: Deleting Transaction works perfectly
+2c7da2c785bc14bbf3b782c85d143242f253bd85 0159140ee214191e0d54fc175ea809c1bcf77a38 Rohit <rohitsrao@gmail.com> 1626871391 +0200	commit: Removed print statements
+0159140ee214191e0d54fc175ea809c1bcf77a38 316056c89948e160de6ac0b1ddff24044b5a05e4 Rohit <rohitsrao@gmail.com> 1626871956 +0200	commit: Increased height of list of transactions widget
+316056c89948e160de6ac0b1ddff24044b5a05e4 0d24899adad4e57628837982620c5d75a5721308 Rohit <rohitsrao@gmail.com> 1627885798 +0200	commit: Introduced MediaQuery to dynamically calcuate screen height
+0d24899adad4e57628837982620c5d75a5721308 6419deee847cf30655a25ff8d0f4c210568ad734 Rohit <rohitsrao@gmail.com> 1627909548 +0200	commit: Converted fixed heights to device based relative heights
+6419deee847cf30655a25ff8d0f4c210568ad734 2f9704f1c4914c53aa928eb57ef016b0233c23e4 Rohit <rohitsrao@gmail.com> 1627910158 +0200	commit: Fixed app into portrait mode only
+2f9704f1c4914c53aa928eb57ef016b0233c23e4 32f0b06e7f4b8199f23dfa1010660ab9c0df93d6 Rohit <rohitsrao@gmail.com> 1627910923 +0200	commit: Added a switch and defined its onChanged property
+32f0b06e7f4b8199f23dfa1010660ab9c0df93d6 b1c9fb2b9cfecf072cef81c907a54b705fc10686 Rohit <rohitsrao@gmail.com> 1627911124 +0200	commit: Added ternary operator to show chart only if user selected
+b1c9fb2b9cfecf072cef81c907a54b705fc10686 aa903b551b9e350a241d13d6a4ef9ac0bb344470 Rohit <rohitsrao@gmail.com> 1627911903 +0200	commit: Fixed the zzz image overflow in landscape mode
+aa903b551b9e350a241d13d6a4ef9ac0bb344470 e45f4b641733478fda1796bc63e07de0b900aa4e Rohit <rohitsrao@gmail.com> 1627912358 +0200	commit: Switch to show chart is shown only in landscape mode
+e45f4b641733478fda1796bc63e07de0b900aa4e edb5b01fd786210fedb2c08022f001d539076e4c Rohit <rohitsrao@gmail.com> 1627913109 +0200	commit: Chart and list of transactions shown in portrait mode and option to
+edb5b01fd786210fedb2c08022f001d539076e4c 539f9ddf2eb009473c44f434e8941a99b3012982 Rohit <rohitsrao@gmail.com> 1627918254 +0200	commit: Bottom Modal Sheet now scrollable
+539f9ddf2eb009473c44f434e8941a99b3012982 3472fb1eb2a8196ab95aaac6a2028322a5f4af60 Rohit <rohitsrao@gmail.com> 1627918887 +0200	commit: Delete word shown next to icon depending on width
+3472fb1eb2a8196ab95aaac6a2028322a5f4af60 dc5931fea0d6349fb42fcb05020d98b627bbe863 Rohit <rohitsrao@gmail.com> 1627919048 +0200	commit: Refactored MediaQuery into a separate variable
+dc5931fea0d6349fb42fcb05020d98b627bbe863 f94a3624c64f7e8f8c7f6a1f00d12af3ffd3dfcd Rohit <rohitsrao@gmail.com> 1627919333 +0200	commit: Switch.adaptive() to adapt to iOS or Android
+f94a3624c64f7e8f8c7f6a1f00d12af3ffd3dfcd 06e3c2effd329b2aad91c7587bee5c1bcce2276c Rohit <rohitsrao@gmail.com> 1627920805 +0200	commit: Added multiple changes to make sure compatible with iOS
+06e3c2effd329b2aad91c7587bee5c1bcce2276c db3b73ee70f886d489b0a9a27d18fca112aa36df Rohit <rohitsrao@gmail.com> 1627921201 +0200	commit: More iOS compatibility added
+db3b73ee70f886d489b0a9a27d18fca112aa36df 9a1cf79e726ede2a763299d5ab8d49726d9e9772 Rohit <rohitsrao@gmail.com> 1627922368 +0200	commit: Updated text style theme for iOS compatibility
+9a1cf79e726ede2a763299d5ab8d49726d9e9772 3fce15bb371200a945e1d66afea038f4d4cab02c Rohit <rohitsrao@gmail.com> 1627926620 +0200	commit: Converted FlatButton for DatePicker to CupertinoFlatButton
+3fce15bb371200a945e1d66afea038f4d4cab02c d89f455579b4dcf3f03a1b646f56746fbe135f04 Rohit <rohitsrao@gmail.com> 1627927694 +0200	commit: Introduced an adaptive widget for FlatButton
