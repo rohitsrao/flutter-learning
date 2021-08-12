@@ -23,7 +23,8 @@ class MyApp extends StatelessWidget {
           ),
           title: TextStyle(
             fontSize: 24,
-            fontFamily: 'RobotoCondensed'
+            fontFamily: 'Raleway',
+            fontWeight: FontWeight.bold
           )
         )
       ),
