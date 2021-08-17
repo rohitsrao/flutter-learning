@@ -21,7 +21,7 @@ class CategoryMealsScreen extends StatelessWidget {
         ),
         body: Center(
           child: Text(
-            'The Recipes for the category'
+            'Recipes'
           )
         )
       )
