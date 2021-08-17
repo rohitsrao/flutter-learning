@@ -4,6 +4,7 @@ import './screens/categories.dart';
 import './screens/category_meals.dart';
 import './screens/meal_detail.dart';
 import './screens/tabs.dart';
+import './screens/filters.dart';
 
 void main() => runApp(MyApp());
 
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
         '/': (ctx) => TabsScreen(),
         CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
         MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
+        FiltersScreen.routeName: (ctx) => FiltersScreen(),
       },
       onGenerateRoute: (settings) {
         return MaterialPageRoute(
