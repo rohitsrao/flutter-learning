@@ -6,3 +6,15 @@
 03_meals_app/.metadata
 03_meals_app/my_app.iml
 03_meals_app/.packages
+
+04_shop/android/
+04_shop/ios/
+04_shop/build/
+04_shop/test/
+04_shop/web/
+04_shop/.dart_tool/
+04_shop/.idea
+04_shop/pubspec.lock
+04_shop/.metadata
+04_shop/my_app.iml
+04_shop/.packages
