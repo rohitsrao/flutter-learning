@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../providers/product.dart';
+import '../providers/products.dart';
 
 class EditProductScreen extends StatefulWidget {
 
@@ -55,6 +57,8 @@ class _EditProductScreenState extends State<EditProductScreen>{
       return;
     }
     _form.currentState?.save();
+    Provider.of<Products>(context, listen: false).addProduct(_editedProduct);
+    Navigator.of(context).pop();
   }
 
   @override
@@ -78,28 +82,6 @@ class _EditProductScreenState extends State<EditProductScreen>{
             key: _form,
             child: ListView(
               children: <Widget>[
-                TextFormField(
-                  decoration: InputDecoration(labelText: 'Id'),
-                  textInputAction: TextInputAction.next,
-                  onFieldSubmitted: (_) {
-                    FocusScope.of(context).requestFocus(_titleFocusNode);
-                  },
-                  validator: (value) {
-                    if (value?.isEmpty ?? true) {
-                      return 'Please provide a value for id';
-                    }
-                    return null;
-                  },
-                  onSaved: (value) {
-                    _editedProduct = Product(
-                      id: value ?? '',
-                      title: _editedProduct.title,
-                      price: _editedProduct.price,
-                      description: _editedProduct.description,
-                      imageUrl: _editedProduct.imageUrl,
-                    );
-                  }
-                ),
                 TextFormField(
                   decoration: InputDecoration(labelText: 'Title'),
                   textInputAction: TextInputAction.next,
@@ -219,7 +201,7 @@ class _EditProductScreenState extends State<EditProductScreen>{
                             if (value.isEmpty) {
                               return 'Please enter an image URL';
                             }
-                            if (!value.startsWith('http') && !value.startWith('https')) {
+                            if (!value.startsWith('http') && !value.startsWith('https')) {
                               return 'Please enter a valid URL';
                             }
                             if (!value.endsWith('.png') && !value.endsWith('.jpg') && !value.endsWith('.jpeg')) {
