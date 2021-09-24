@@ -14,7 +14,6 @@ class EditProductScreen extends StatefulWidget {
 
 class _EditProductScreenState extends State<EditProductScreen>{
 
-  final _titleFocusNode = FocusNode();
   final _priceFocusNode = FocusNode();
   final _descriptionFocusNode = FocusNode();
   final _imageUrlFocusNode = FocusNode();
@@ -63,7 +62,6 @@ class _EditProductScreenState extends State<EditProductScreen>{
 
   @override
   void dispose() {
-    _titleFocusNode.dispose();
     _priceFocusNode.dispose();
     _descriptionFocusNode.dispose();
     _imageUrlFocusNode.removeListener(_updateImageUrl);
@@ -94,7 +92,25 @@ class _EditProductScreenState extends State<EditProductScreen>{
       });
     }
     else {
-      Provider.of<Products>(context, listen: false).addProduct(_editedProduct)
+      Provider.of<Products>(context, listen: false)
+        .addProduct(_editedProduct)
+        .catchError((error) {
+          return showDialog(
+            context: context,
+            builder: (context) => AlertDialog(
+              title: Text('An error occurred!'),
+              content: Text('Something went wrong'),
+              actions: <Widget>[
+                FlatButton(
+                  child: Text('Okay'),
+                  onPressed: () {
+                    Navigator.of(context, rootNavigator: true).pop();
+                  }
+                )
+              ]
+            ),
+          );
+        })
         .then((_) {
           Navigator.of(context).pop();
         });
@@ -134,7 +150,6 @@ class _EditProductScreenState extends State<EditProductScreen>{
                   initialValue: _initValues['title'],
                   decoration: InputDecoration(labelText: 'Title'),
                   textInputAction: TextInputAction.next,
-                  focusNode: _titleFocusNode,
                   onFieldSubmitted: (_) {
                     FocusScope.of(context).requestFocus(_priceFocusNode);
                   },
