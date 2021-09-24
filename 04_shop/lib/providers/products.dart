@@ -109,14 +109,24 @@ class Products with ChangeNotifier {
     }
   }
 
-  void updateProduct(String id, Product updatedProduct) {
+  Future<void> updateProduct(String id, Product updatedProduct) async {
     final prodIndex = _items.indexWhere((prod) => prod.id == id);
     if (prodIndex >= 0) {
+      final url = Uri.parse(
+        'https://flutter-update-39d4f-default-rtdb.europe-west1.firebasedatabase.app/products/$id.json'
+      );
+      await http.patch(
+        url,
+        body: json.encode({
+          'title': updatedProduct.title,
+          'description': updatedProduct.description,
+          'imageUrl': updatedProduct.imageUrl,
+          'price': updatedProduct.price,
+        }),
+      );
       _items[prodIndex] = updatedProduct;
+      notifyListeners();
     }
-    else {
-    }
-    notifyListeners();
   }
 
   void deleteProduct(String id) {
