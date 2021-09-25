@@ -1,6 +1,8 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../providers/auth.dart';
 
 enum AuthMode { Signup, Login }
 
@@ -59,7 +61,6 @@ class AuthScreen extends StatelessWidget {
                       child: Text(
                         'MyShop',
                         style: TextStyle(
-                          //color: Theme.of(context).accentTextTheme.title.color,
                           color: Theme.of(context).colorScheme.onSecondary,
                           fontSize: 50,
                           fontFamily: 'Anton',
@@ -83,9 +84,6 @@ class AuthScreen extends StatelessWidget {
 }
 
 class AuthCard extends StatefulWidget {
-  //const AuthCard({
-  //  Key key,
-  //}) : super(key: key);
 
   @override
   _AuthCardState createState() => _AuthCardState();
@@ -101,7 +99,7 @@ class _AuthCardState extends State<AuthCard> {
   var _isLoading = false;
   final _passwordController = TextEditingController();
 
-  void _submit() {
+  void _submit() async {
     if (!_formKey.currentState!.validate()) {
       // Invalid!
       return;
@@ -114,6 +112,10 @@ class _AuthCardState extends State<AuthCard> {
       // Log user in
     } else {
       // Sign user up
+      await Provider.of<Auth>(context, listen:false).signup(
+        _authData['email'].toString(),
+        _authData['password'].toString(),
+      );
     }
     setState(() {
       _isLoading = false;
@@ -158,7 +160,6 @@ class _AuthCardState extends State<AuthCard> {
                     if (value!.isEmpty || !value.contains('@')) {
                       return 'Invalid email!';
                     }
-                    return null;
                     return null;
                   },
                   onSaved: (value) {
