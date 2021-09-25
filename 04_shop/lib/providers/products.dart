@@ -2,12 +2,20 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
+import './auth.dart';
 import './product.dart';
 import '../models/http_exception.dart';
 
 class Products with ChangeNotifier {
 
+  String? _authToken;
   List<Product> _items = [];
+
+  Products(this._authToken, this._items);
+
+  //set authToken(String value) {
+  //  _authToken = value;
+  //}
 
   //List<Product> _items = [
   //  Product(
@@ -57,7 +65,9 @@ class Products with ChangeNotifier {
   }
 
   Future<void> fetchAndSetProducts() async {
-    final url = Uri.parse('https://flutter-update-39d4f-default-rtdb.europe-west1.firebasedatabase.app/products.json');
+    final url = Uri.parse(
+        'https://flutter-update-39d4f-default-rtdb.europe-west1.firebasedatabase.app/products.json?auth=$_authToken'
+    );
     try {
       final response = await http.get(url);
       final List<Product> loadedProducts = [];
