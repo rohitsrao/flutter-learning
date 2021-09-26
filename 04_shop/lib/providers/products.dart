@@ -26,9 +26,13 @@ class Products with ChangeNotifier {
     return _items.firstWhere((product) => product.id == id);
   }
 
-  Future<void> fetchAndSetProducts() async {
+  Future<void> fetchAndSetProducts({bool filterByUser = false}) async {
+    final baseUrl = 'https://flutter-update-39d4f-default-rtdb.europe-west1.firebasedatabase.app';
+    final endpoint = 'products.json';
+    final authString = 'auth=$_authToken';
+    final filterString = filterByUser ? 'orderBy="creatorId"&equalTo="$_userId"' : '';
     var url = Uri.parse(
-        'https://flutter-update-39d4f-default-rtdb.europe-west1.firebasedatabase.app/products.json?auth=$_authToken'
+        '$baseUrl/$endpoint?$authString&$filterString'
     );
     try {
       final response = await http.get(url);
@@ -74,6 +78,7 @@ class Products with ChangeNotifier {
           'description': product.description,
           'imageUrl': product.imageUrl,
           'price': product.price,
+          'creatorId': _userId,
         }),
       );
       final newProduct = Product(
