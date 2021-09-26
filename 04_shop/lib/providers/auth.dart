@@ -7,7 +7,7 @@ import '../models/http_exception.dart';
 
 class Auth with ChangeNotifier {
 
-  String _token = '';
+  String? _token = '';
   DateTime? _expiryDate;
   String _userId = '';
 
@@ -61,6 +61,13 @@ class Auth with ChangeNotifier {
 
   Future<void> login(String email, String password) async {
     return _authenticate(email, password, 'signInWithPassword');
+  }
+
+  void logout() {
+    _token = null;
+    _userId = '';
+    _expiryDate = null;
+    notifyListeners();
   }
 
 }
