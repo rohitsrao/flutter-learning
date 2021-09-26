@@ -8,8 +8,8 @@ import '../models/http_exception.dart';
 
 class Products with ChangeNotifier {
 
-  String? _authToken;
-  String? _userId;
+  String _authToken;
+  String _userId;
   List<Product> _items = [];
 
   Products(this._authToken, this._userId, this._items);
