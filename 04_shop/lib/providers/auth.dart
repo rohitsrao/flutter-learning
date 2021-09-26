@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/widgets.dart';
 import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../config.dart';
 import '../models/http_exception.dart';
@@ -52,6 +53,13 @@ class Auth with ChangeNotifier {
       _expiryDate = DateTime.now().add(Duration(seconds: int.parse(responseData['expiresIn'])));
       _autoLogout();
       notifyListeners();
+      final preferences = await SharedPreferences.getInstance();
+      final userData = json.encode({
+        'token': _token,
+        'userId': _userId,
+        'expiryDate': _expiryDate?.toIso8601String(),
+      });
+      preferences.setString('userData', userData);
     }
     catch (error) {
       throw error;
@@ -66,7 +74,25 @@ class Auth with ChangeNotifier {
     return _authenticate(email, password, 'signInWithPassword');
   }
 
-  void logout() {
+  Future<bool> tryAutoLogin() async {
+    final preferences = await SharedPreferences.getInstance();
+    if (!preferences.containsKey('userData')) {
+      return false;
+    }
+    final extractedUserData = json.decode(preferences.getString('userData') ?? '{}') as Map<String, dynamic>;
+    final expiryDate = DateTime.parse(extractedUserData['expiryDate'].toString());
+    if (expiryDate.isBefore(DateTime.now())) {
+      return false;
+    }
+    _token = extractedUserData['token'].toString();
+    _userId = extractedUserData['userId'].toString();
+    _expiryDate = expiryDate;
+    notifyListeners();
+    _autoLogout();
+    return true;
+  }
+
+  Future<void> logout() async {
     _token = null;
     _userId = '';
     _expiryDate = null;
@@ -75,6 +101,8 @@ class Auth with ChangeNotifier {
       _authTimer = null;
     }
     notifyListeners();
+    final preferences = await SharedPreferences.getInstance();
+    preferences.clear();
   }
 
   void _autoLogout() {
@@ -83,7 +111,7 @@ class Auth with ChangeNotifier {
       _authTimer?.cancel();
     }
     _authTimer = Timer(
-      Duration(seconds: timeToExpiry), 
+      Duration(seconds: timeToExpiry ?? 0), 
       logout,
     );
   }

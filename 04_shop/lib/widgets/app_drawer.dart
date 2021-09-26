@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../providers/auth.dart';
+import '../screens/auth_screen.dart';
 import '../screens/orders_screen.dart';
 import '../screens/user_products_screen.dart';
 
