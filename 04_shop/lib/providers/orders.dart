@@ -22,17 +22,21 @@ class OrderItem {
 class Orders with ChangeNotifier {
 
   List<OrderItem> _orders = [];
-  final String? authToken;
+  final String _authToken;
+  final String _userId;
 
-  Orders(this.authToken, this._orders);
+  Orders(this._authToken, this._userId, this._orders);
 
   List<OrderItem> get orders {
     return [..._orders];
   }
 
   Future<void> fetchAndSetOrders() async {
+    final baseUrl = 'https://flutter-update-39d4f-default-rtdb.europe-west1.firebasedatabase.app';
+    final endpoint = 'orders/$_userId.json';
+    final authString = 'auth=$_authToken';
     final url = Uri.parse(
-      'https://flutter-update-39d4f-default-rtdb.europe-west1.firebasedatabase.app/orders.json?auth=$authToken'
+      '$baseUrl/$endpoint?$authString'
     );
     final response = await http.get(url);
     final List<OrderItem> loadedOrders = [];
@@ -62,8 +66,11 @@ class Orders with ChangeNotifier {
   }
 
   Future<void> addOrder(List<CartItem> cartProducts, double total) async {
+    final baseUrl = 'https://flutter-update-39d4f-default-rtdb.europe-west1.firebasedatabase.app';
+    final endpoint = 'orders/$_userId.json';
+    final authString = 'auth=$_authToken';
     final url = Uri.parse(
-      'https://flutter-update-39d4f-default-rtdb.europe-west1.firebasedatabase.app/orders.json?auth=$authToken'
+      '$baseUrl/$endpoint?$authString'
     );
     final timestamp = DateTime.now();
     final response = await http.post(
