@@ -15,9 +15,6 @@ class ProductDetailScreen extends StatelessWidget {
     
     return (
       Scaffold(
-        //appBar: AppBar(
-        //  title: ,
-        //),
         body: CustomScrollView(
           slivers: <Widget>[
             SliverAppBar(
