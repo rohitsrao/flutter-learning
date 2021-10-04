@@ -24,10 +24,10 @@ class _FiltersScreenState extends State<FiltersScreen>{
 
   @override
   initState() {
-    _glutenFree = widget.currentFilters['gluten'];
-    _lactoseFree = widget.currentFilters['lactose'];
-    _vegetarian = widget.currentFilters['vegetarian'];
-    _vegan = widget.currentFilters['vegan'];
+    _glutenFree = widget.currentFilters['gluten'] as bool;
+    _lactoseFree = widget.currentFilters['lactose'] as bool;
+    _vegetarian = widget.currentFilters['vegetarian'] as bool;
+    _vegan = widget.currentFilters['vegan'] as bool;
     super.initState();
   }
 
@@ -35,7 +35,8 @@ class _FiltersScreenState extends State<FiltersScreen>{
     String title, 
     String description, 
     bool currentValue,
-    Function updateValue,
+    //Function updateValue,
+    void Function(bool)? updateValue,
     ) {
     return SwitchListTile(
       title: Text(
@@ -79,7 +80,7 @@ class _FiltersScreenState extends State<FiltersScreen>{
               padding: EdgeInsets.all(20),
               child: Text(
                 'Adjust your meal selection.',
-                style: Theme.of(context).textTheme.title,
+                style: Theme.of(context).textTheme.headline1,
               )
             ),
             Expanded(

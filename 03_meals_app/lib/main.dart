@@ -31,16 +31,16 @@ class _MyAppState extends State<MyApp>{
     setState(() {
       _filters = filterData;
       _availableMeals = DUMMY_MEALS.where((meal) {
-        if (_filters['gluten'] && !meal.isGlutenFree) {
+        if (_filters['gluten'] as bool && !meal.isGlutenFree) {
           return false;
         }
-        if (_filters['lactose'] && !meal.isLactoseFree) {
+        if (_filters['lactose'] as bool && !meal.isLactoseFree) {
           return false;
         }
-        if (_filters['vegan'] && !meal.isVegan) {
+        if (_filters['vegan'] as bool && !meal.isVegan) {
           return false;
         }
-        if (_filters['vegetarian'] && !meal.isVegetarian) {
+        if (_filters['vegetarian'] as bool && !meal.isVegetarian) {
           return false;
         }
         return true;
@@ -81,13 +81,13 @@ class _MyAppState extends State<MyApp>{
         canvasColor: Color.fromRGBO(255, 254, 229, 1),
         fontFamily: 'Raleway',
         textTheme: ThemeData.light().textTheme.copyWith(
-          body1: TextStyle(
+          bodyText1: TextStyle(
             color: Color.fromRGBO(20, 51, 51, 1)
           ),
-          body2: TextStyle(
+          bodyText2: TextStyle(
             color: Color.fromRGBO(20, 51, 51, 1)
           ),
-          title: TextStyle(
+          headline1: TextStyle(
             fontSize: 24,
             fontFamily: 'RobotoCondensed',
             fontWeight: FontWeight.bold

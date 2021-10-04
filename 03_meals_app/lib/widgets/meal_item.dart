@@ -13,12 +13,12 @@ class MealItem extends StatelessWidget {
   final Affordability affordability;
 
   MealItem({
-    @required this.id,
-    @required this.title,
-    @required this.imageUrl,
-    @required this.duration,
-    @required this.complexity,
-    @required this.affordability,
+    required this.id,
+    required this.title,
+    required this.imageUrl,
+    required this.duration,
+    required this.complexity,
+    required this.affordability,
   });
 
   String get complexityText {

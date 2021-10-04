@@ -4,7 +4,7 @@ import '../screens/filters.dart';
 
 class MainDrawer extends StatelessWidget {
 
-  Widget buildListTile(String title, IconData icon, Function tapHandler) {
+  Widget buildListTile(String title, IconData icon, VoidCallback tapHandler) {
     return ListTile(
       leading: Icon(
         icon,
