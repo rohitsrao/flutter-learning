@@ -19,14 +19,15 @@
 04_shop/my_app.iml
 04_shop/.packages
 
+05_places/analysis_options.yaml
 05_places/android/
-05_places/ios/
 05_places/build/
-05_places/test/
-05_places/web/
 05_places/.dart_tool/
 05_places/.idea
-05_places/pubspec.lock
+05_places/ios/
 05_places/.metadata
-05_places/my_app.iml
 05_places/.packages
+05_places/places.iml
+05_places/pubspec.lock
+05_places/test/
+05_places/web/
