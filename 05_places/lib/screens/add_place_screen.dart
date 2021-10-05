@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../widgets/image_input.dart';
+import '../widgets/location_input.dart';
 import '../providers/great_places.dart';
 
 class AddPlaceScreen extends StatefulWidget {
@@ -39,38 +40,43 @@ class _AddPlaceScreenState extends State<AddPlaceScreen>{
         appBar: AppBar(
           title: Text('Add New Place'),
         ),
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            Expanded(
-              child: SingleChildScrollView(
-                child: Padding(
-                  padding: EdgeInsets.all(10),
-                  child: Column(
-                    children: <Widget>[
-                      TextField(
-                        controller: _titleController,
-                        decoration: InputDecoration(labelText: 'Title'),
-                      ),
-                      SizedBox(height: 10),
-                      ImageInput(_selectImage),
-                    ]
+        body: Padding(
+          padding: EdgeInsets.all(12),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              Expanded(
+                child: SingleChildScrollView(
+                  child: Padding(
+                    padding: EdgeInsets.all(10),
+                    child: Column(
+                      children: <Widget>[
+                        TextField(
+                          controller: _titleController,
+                          decoration: InputDecoration(labelText: 'Title'),
+                        ),
+                        SizedBox(height: 20),
+                        ImageInput(_selectImage),
+                        SizedBox(height: 20),
+                        LocationInput(),
+                      ]
+                    ),
                   ),
                 ),
               ),
-            ),
-            ElevatedButton.icon(
-              onPressed: _savePlace,
-              icon: Icon(Icons.add),
-              label: Text('Add Place'),
-              style: ElevatedButton.styleFrom(
-                elevation: 0,
-                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                primary: Theme.of(context).accentColor,
-                onPrimary: Colors.black,
-              )
-            ),
-          ]
+              ElevatedButton.icon(
+                onPressed: _savePlace,
+                icon: Icon(Icons.add),
+                label: Text('Add Place'),
+                style: ElevatedButton.styleFrom(
+                  elevation: 0,
+                  tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                  primary: Theme.of(context).accentColor,
+                  onPrimary: Colors.black,
+                )
+              ),
+            ]
+          ),
         ),
       )
     );
