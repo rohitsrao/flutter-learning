@@ -31,3 +31,5 @@
 05_places/pubspec.lock
 05_places/test/
 05_places/web/
+05_places/.flutter-plugins
+05_places/.flutter-plugins-dependencies
