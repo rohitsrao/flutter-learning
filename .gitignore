@@ -33,3 +33,4 @@
 05_places/web/
 05_places/.flutter-plugins
 05_places/.flutter-plugins-dependencies
+05_places/config.dart
